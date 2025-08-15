@@ -41,6 +41,12 @@ Database credentials:
 
 A comprehensive task management and notification system built with microservices architecture.
 
+[![GitHub Repository](https://img.shields.io/badge/GitHub-microservice--project-blue?logo=github)](https://github.com/namansethia1/microservice-project)
+[![Java](https://img.shields.io/badge/Java-17-orange?logo=java)](https://www.oracle.com/java/)
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.1.0-green?logo=spring)](https://spring.io/projects/spring-boot)
+[![Angular](https://img.shields.io/badge/Angular-17-red?logo=angular)](https://angular.io/)
+[![Docker](https://img.shields.io/badge/Docker-Compose-blue?logo=docker)](https://www.docker.com/)
+
 ## 🏗️ Architecture Overview
 
 ```
@@ -59,19 +65,21 @@ Frontend (Angular) ←→ User Service ←→ Task Service ←→ Notification S
 - MySQL 8.0+
 - Docker & Docker Compose
 
-### 1. Database Setup
+### 1. Clone Repository
+```bash
+git clone https://github.com/namansethia1/microservice-project.git
+cd microservice-project
+```
+
+### 2. Database Setup
 ```sql
 CREATE DATABASE userdb;
 CREATE DATABASE taskdb;
 CREATE DATABASE notificationdb;
 ```
 
-### 2. Start Services
+### 3. Start Services
 ```bash
-# Clone the project
-git clone <repository-url>
-cd CIA3_MS
-
 # Start all services with Docker
 docker-compose up -d
 
@@ -79,7 +87,7 @@ docker-compose up -d
 docker-compose ps
 ```
 
-### 3. Access the Application
+### 4. Access the Application
 - **Dashboard**: http://localhost:4200
 - **User API**: http://localhost:8081/api/users
 - **Task API**: http://localhost:8082/api/tasks
@@ -88,7 +96,7 @@ docker-compose ps
 ## 📁 Project Structure
 
 ```
-CIA3_MS/
+microservice-project/
 ├── user-service/          # Spring Boot User Management Service
 ├── task-service/          # Spring Boot Task Management Service
 ├── notification-service/  # Spring Boot Notification Service
@@ -146,7 +154,9 @@ curl -X POST http://localhost:8082/api/tasks \
 
 ## 📚 Documentation
 
-For complete technical documentation, setup instructions, API reference, and architecture details, see [PROJECT_DOCUMENTATION.md](./PROJECT_DOCUMENTATION.md)
+For complete technical documentation, setup instructions, API reference, and architecture details, see:
+- [PROJECT_DOCUMENTATION.md](./PROJECT_DOCUMENTATION.md) - Complete technical documentation
+- [PROJECT_DOCUMENTATION.html](./PROJECT_DOCUMENTATION.html) - HTML version for Word conversion
 
 ## 🎯 Project Goals
 
@@ -158,12 +168,65 @@ This project demonstrates:
 - Database design and integration
 - RESTful API development
 
+## 🚀 Deployment
+
+### Using Docker Compose (Recommended)
+```bash
+# Start all services
+docker-compose up -d
+
+# View logs
+docker-compose logs [service-name]
+
+# Stop services
+docker-compose down
+```
+
+### Manual Deployment
+```bash
+# Build all services
+./build.sh
+
+# Or build individually
+cd user-service && mvn clean package
+cd task-service && mvn clean package
+cd notification-service && mvn clean package
+cd frontend && npm run build
+```
+
+## 📸 Screenshots
+
+### Dashboard Overview
+The main dashboard shows real-time statistics from all microservices:
+- User count from User Service
+- Task count and recent tasks from Task Service  
+- Notification count from Notification Service
+- Direct API endpoint access links
+
+### Service Architecture
+Three independent Spring Boot microservices:
+- **User Service** (8081): Manages user accounts and authentication
+- **Task Service** (8082): Handles task lifecycle and assignments
+- **Notification Service** (8083): Processes notifications and alerts
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/new-feature`)
+3. Commit your changes (`git commit -am 'Add new feature'`)
+4. Push to the branch (`git push origin feature/new-feature`)
+5. Create a Pull Request
+
+## 📝 License
+
+This project is created for educational purposes as part of a microservices architecture demonstration.
+
 ---
 
-**Developed by:** [Your Name]  
-**Date:** August 15, 2025  
-**Course:** [Course Name]  
-**Institution:** [Institution Name]
+**Repository**: https://github.com/namansethia1/microservice-project  
+**Developed by**: Naman Sethia  
+**Date**: August 15, 2025  
+**Architecture**: Microservices with Spring Boot & Angular
    ```
 
 2. **Build all services**
