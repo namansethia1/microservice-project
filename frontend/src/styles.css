@@ -1,0 +1,98 @@
+/* Global Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.task-priority-low {
+  border-left: 4px solid #28a745;
+}
+
+.task-priority-medium {
+  border-left: 4px solid #ffc107;
+}
+
+.task-priority-high {
+  border-left: 4px solid #fd7e14;
+}
+
+.task-priority-urgent {
+  border-left: 4px solid #dc3545;
+}
+
+.notification-badge {
+  background-color: #dc3545;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+}
+
+.notification-item {
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+  transition: background-color 0.2s;
+}
+
+.notification-item:hover {
+  background-color: #f8f9fa;
+}
+
+.notification-unread {
+  background-color: #e3f2fd;
+  font-weight: bold;
+}
+
+.sidebar {
+  min-height: 100vh;
+  background-color: #343a40;
+}
+
+.sidebar .nav-link {
+  color: #adb5bd;
+  border-radius: 0;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+  color: #fff;
+  background-color: #495057;
+}
+
+.main-content {
+  padding: 20px;
+}
+
+.status-pending {
+  background-color: #6c757d;
+  color: white;
+}
+
+.status-in-progress {
+  background-color: #007bff;
+  color: white;
+}
+
+.status-completed {
+  background-color: #28a745;
+  color: white;
+}
+
+.status-cancelled {
+  background-color: #dc3545;
+  color: white;
+}

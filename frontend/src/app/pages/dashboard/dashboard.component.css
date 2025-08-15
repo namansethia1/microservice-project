@@ -1,0 +1,17 @@
+/* Dashboard Component Styles */
+.badge-low {
+  background-color: #28a745;
+}
+
+.badge-medium {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.badge-high {
+  background-color: #fd7e14;
+}
+
+.badge-urgent {
+  background-color: #dc3545;
+}

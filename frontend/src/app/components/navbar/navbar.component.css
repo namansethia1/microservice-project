@@ -1,0 +1,12 @@
+/* Navbar Component Styles */
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  font-size: 0.75rem;
+}
+
+.notification-item {
+  max-width: 300px;
+  white-space: normal;
+}
